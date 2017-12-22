@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="assets/javascript/app.js"></script>
 	<title>US Citizenship Test</title>
 </head>
@@ -13,10 +14,12 @@
 
 	<h2>Would you qualify as a United States citizen?</h2>
 
+	<button type="button" id="start">Start</button>
+
 	<div id="timer">
 	</div>
 
-	<div class="question container">
+	<div class="question-container">
 		<p class="question">What is the supreme law of the land?</p>
 			<ul class="answers">
 				<input type="radio" name="q1" value="Declaration of Indepedence"> Declaration of Independence<br>
@@ -93,7 +96,7 @@
 			<ul class="answers">
 				<input type="radio" name="q10" value="Hancock"> John Hancock<br>
 				<input type="radio" name="q10" value="Washington"> George Washington<br>
-				<input type="radio" name="q10" value="Franklin"> Benjamin Franklin<br>
+				<input type="radio" name="q10" value="Jefferson"> Thomas Jefferson<br>
 				<input type="radio" name="q10" value="Hamilton"> Alexander Hamilton<br>
 			</ul>
 	</div>
