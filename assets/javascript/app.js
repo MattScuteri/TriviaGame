@@ -14,4 +14,17 @@ $(document).ready(function(){
 		$('.question-container').show();
 	});
 
+	function checkAnswer() {
+		$('input[name="multiple"]').on('click', function() {
+			let el = $(this);
+			if (el.val() == 'ans') {
+				correctAnswers++;
+			} else {
+				incorrectAnswers++;
+			};
+		});
+	};
+
+// check console.log() to see if correctAnswers & incorrectAnswers updates
+
 });
