@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 		let correctAnswers = 0;
 		let incorrectAnswers = 0;
-		let time = 60;
+		let time = 90;
 		let intervalId;
 
 	$('#timer').html("Time remaining: " + time + " sec");
@@ -14,6 +14,7 @@ $(document).ready(function(){
 		$('.question-container').show();
 		$('#start').hide();
 		$('#submit').show();
+		$('#restart').show();
 		run();
 		decrement();
 		checkAnswer1();
@@ -28,11 +29,17 @@ $(document).ready(function(){
 		checkAnswer10();																																				
 	});
 
+	$('#restart').on("click", function() {
+		document.location.reload(true);
+	})
+
 	function startGame() {
+		$('#start').show();
 		$('#timer').hide();
 		$('.question-container').hide();
 		$('#timeIsUp').hide();
 		$('#submit').hide();
+		$('#restart').hide();
 	};
 
 	function run() {
@@ -59,20 +66,14 @@ $(document).ready(function(){
 		$('#timeIsUp').append("<br>Number correct: " + correctAnswers + "</br>");
 		$('#timeIsUp').append("<br>Number incorrect: " + incorrectAnswers + "</br>");
 		if (correctAnswers > 5) {
-			$('#timeIsUp').append("<br>Wow! You are a great American!</br>")
+			$('#timeIsUp').append("<br>Wow! You are a great American!</br>");
+			$('#timeUpImg').append('<img id="FlagHug" src="./assets/images/FlagHug.jpg" />');
+			$('#submit').hide();
 		}	else if (correctAnswers < 5) {
-			$('#timeIsUp').append("<br>Uncle Sam wants YOU...to hit those books more.</br>")
+				$('#timeIsUp').append("<br>Uncle Sam wants YOU...to hit those books more.</br>");
+				$('#timeUpImg').append('<img id="UncleSam" src="./assets/images/UncleSam.jpg" />');
+				$('#submit').hide();	
 		}
-	}
-
-	function checkAnswer1() {
-		$('input[name="q1"]').on('click', function(){
-			if ($(this).val() == 'ans') {
-				correctAnswers++;
-			} else {
-				incorrectAnswers++;
-			}
-		});
 	}
 
 	function checkAnswer1() {

@@ -9,123 +9,129 @@
 	<title>US Citizenship Test</title>
 </head>
 
-<body>
-	<div class="container">
-		<h1>United States Trivia!</h1>
+<body background="assets/images/AmericanFlag.jpg">
+	<div class="main-container">
+	<h1 class="header">United States Trivia!</h1>
 
-		<h3>The below questions are pulled from the United States Citizenship exam. How many do you know?</h3>
+	<h3 class="instructions">The below questions are pulled from the United States Citizenship exam.</h3>
 
-		<button type="button" id="start">Start</button>
+	<h3 class="instructions">How many can you answer before time runs out?</h3>
 
-		<div id="timer">
-			<div id="display"></div>
-		</div>
+	<button type="button" id="start">Start</button>
 
-		<div id="timeIsUp"></div>
-
-		<div class="question-container">
-			<form class="questionForm" id="q1">
-				<p class="question">What is the supreme law of the land?</p>
-					<ul class="answers">
-						<input type="radio" name="q1" value="inc"> Declaration of Independence<br>
-						<input type="radio" name="q1" value="ans"> The Constitution<br>
-						<input type="radio" name="q1" value="inc"> Articles of Confederation<br>
-						<input type="radio" name="q1" value="inc"> The Book of Mormon<br>
-					</ul>
-			</form>
-
-			<form class="questionForm" id="q2">		
-				<p class="question">What do we call the first ten amendments to the Constitution?</p>
-					<ul class="answers">	
-						<input type="radio" name="q2" value="ans"> The Bill of Rights<br>
-						<input type="radio" name="q2" value="inc"> Article of Confederation<br>
-						<input type="radio" name="q2" value="inc"> Federalist Papers<br>
-						<input type="radio" name="q2" value="inc"> Declaration of Independence<br>
-					</ul>
-			</form>
-
-			<form class="questionForm" id="q3">
-				<p class="question">What is one right or freedom from the First Amendment?</p>
-					<ul class="answers">
-						<input type="radio" name="q3" value="inc"> The right to bear arms<br>
-						<input type="radio" name="q3" value="inc"> The right to be secure against unreasonable search and seizure<br>
-						<input type="radio" name="q3" value="ans"> Freedom of religion<br>
-						<input type="radio" name="q3" value="inc"> The right to trial by jury<br>
-					</ul>
-			</form>		
-
-			<form class="questionForm" id="q4">
-				<p class="question">Which of these is one of the three branches of the Federal Government?</p>
-					<ul class="answers">
-						<input type="radio" name="q4" value="inc"> The President<br>
-						<input type="radio" name="q4" value="inc"> The Senate<br>
-						<input type="radio" name="q4" value="inc"> The House of Representatives<br>
-						<input type="radio" name="q4" value="ans"> The Executive<br>
-					</ul>
-			</form>
-		
-			<form class="questionForm" id="q5">
-				<p class="question">If the President and Vice President can no longer serve, who becomes president?</p>
-					<ul class="answers">
-						<input type="radio" name="q5" value="ans"> Speaker of the House<br>
-						<input type="radio" name="q5" value="inc"> Senate Majority Whip<br>
-						<input type="radio" name="q5" value="inc"> Secretary of State<br>
-						<input type="radio" name="q5" value="inc"> Press Secretary<br>
-					</ul>
-			</form>
-		
-			<form class="questionForm" id="q6">
-				<p class="question">Which of these was NOT one of the original 13 states?</p>
-					<ul class="answers">
-						<input type="radio" name="q6" value="inc"> New Jersey<br>
-						<input type="radio" name="q6" value="inc"> Rhode Island<br>
-						<input type="radio" name="q6" value="ans"> Maine<br>
-						<input type="radio" name="q6" value="inc"> Delaware<br>
-					</ul>
-			</form>
-
-			<form class="questionForm" id="q7">
-				<p class="question">How many Senators does each state receive?</p>
-					<ul class="answers">
-						<input type="radio" name="q7" value="ans"> 2<br>
-						<input type="radio" name="q7" value="inc"> 6<br>
-						<input type="radio" name="q7" value="inc"> 4<br>
-						<input type="radio" name="q7" value="inc"> The number depends on the population of the state<br>
-					</ul>
-			</form>
-
-			<form class="questionForm" id="q8">
-				<p class="question">What is the name of the national anthem?</p>
-					<ul class="answers">
-						<input type="radio" name="q8" value="inc"> "My Country Tis of Thee"<br>
-						<input type="radio" name="q8" value="ans"> "Star-Spangled Banner"<br>
-						<input type="radio" name="q8" value="inc"> "America, The Beautiful"<br>
-						<input type="radio" name="q8" value="inc"> "This Land is Your Land"<br>
-					</ul>
-			</form>
-
-			<form class="questionForm" id="q9">
-				<p class="question">How many stars are on the American Flag?</p>
-					<ul class="answers">
-						<input type="radio" name="q9" value="inc"> 48<br>
-						<input type="radio" name="q9" value="inc"> 13<br>
-						<input type="radio" name="q9" value="ans"> 50<br>
-						<input type="radio" name="q9" value="inc"> 25<br>
-					</ul>
-			</form>
-
-			<form class="questionForm" id="q10">
-				<p class="question">Who is the author of the Declaration of Indepedence?</p>
-					<ul class="answers">
-						<input type="radio" name="q10" value="inc"> John Hancock<br>
-						<input type="radio" name="q10" value="inc"> George Washington<br>
-						<input type="radio" name="q10" value="ans"> Thomas Jefferson<br>
-						<input type="radio" name="q10" value="inc"> Alexander Hamilton<br>
-					</ul>
-			</form>
-		</div>
-		<button type="button" id="submit">Submit</button>
+	<div id="timer">
+		<div id="display"></div>
 	</div>
-</body>
-</html>
 
+	<div id="timeIsUp"></div>
+
+	<div id="timeUpImg"></div>
+
+	<div class="question-container">
+		<form class="questionForm" id="q1">
+			<p class="question">What is the supreme law of the land?</p>
+				<ul class="answers">
+					<input type="radio" name="q1" value="inc"> Declaration of Independence<br>
+					<input type="radio" name="q1" value="ans"> The Constitution<br>
+					<input type="radio" name="q1" value="inc"> Articles of Confederation<br>
+					<input type="radio" name="q1" value="inc"> The Book of Mormon<br>
+				</ul>
+		</form>
+
+		<form class="questionForm" id="q2">		
+			<p class="question">What do we call the first ten amendments to the Constitution?</p>
+				<ul class="answers">	
+					<input type="radio" name="q2" value="ans"> The Bill of Rights<br>
+					<input type="radio" name="q2" value="inc"> Article of Confederation<br>
+					<input type="radio" name="q2" value="inc"> Federalist Papers<br>
+					<input type="radio" name="q2" value="inc"> Declaration of Independence<br>
+				</ul>
+		</form>
+
+		<form class="questionForm" id="q3">
+			<p class="question">What is one right or freedom from the First Amendment?</p>
+				<ul class="answers">
+					<input type="radio" name="q3" value="inc"> The right to bear arms<br>
+					<input type="radio" name="q3" value="inc"> The right against unreasonable search and seizure<br>
+					<input type="radio" name="q3" value="ans"> Freedom of religion<br>
+					<input type="radio" name="q3" value="inc"> The right to trial by jury<br>
+				</ul>
+		</form>		
+
+		<form class="questionForm" id="q4">
+			<p class="question">Which of these is one of the three branches of the Federal Government?</p>
+				<ul class="answers">
+					<input type="radio" name="q4" value="inc"> The President<br>
+					<input type="radio" name="q4" value="inc"> The Senate<br>
+					<input type="radio" name="q4" value="inc"> The House of Representatives<br>
+					<input type="radio" name="q4" value="ans"> The Executive<br>
+				</ul>
+		</form>
+		
+		<form class="questionForm" id="q5">
+			<p class="question">If the President and Vice President can no longer serve, who becomes president?</p>
+				<ul class="answers">
+					<input type="radio" name="q5" value="ans"> Speaker of the House<br>
+					<input type="radio" name="q5" value="inc"> Senate Majority Whip<br>
+					<input type="radio" name="q5" value="inc"> Secretary of State<br>
+					<input type="radio" name="q5" value="inc"> Press Secretary<br>
+				</ul>
+		</form>
+		
+		<form class="questionForm" id="q6">
+			<p class="question">Which of these was NOT one of the original 13 states?</p>
+				<ul class="answers">
+					<input type="radio" name="q6" value="inc"> New Jersey<br>
+					<input type="radio" name="q6" value="inc"> Rhode Island<br>
+					<input type="radio" name="q6" value="ans"> Maine<br>
+					<input type="radio" name="q6" value="inc"> Delaware<br>
+				</ul>
+		</form>
+
+		<form class="questionForm" id="q7">
+			<p class="question">How many Senators does each state receive?</p>
+				<ul class="answers">
+					<input type="radio" name="q7" value="ans"> 2<br>
+					<input type="radio" name="q7" value="inc"> 6<br>
+					<input type="radio" name="q7" value="inc"> 4<br>
+					<input type="radio" name="q7" value="inc"> Depends on population<br>
+				</ul>
+		</form>
+
+		<form class="questionForm" id="q8">
+			<p class="question">What is the name of the national anthem?</p>
+				<ul class="answers">
+					<input type="radio" name="q8" value="inc"> "My Country Tis of Thee"<br>
+					<input type="radio" name="q8" value="ans"> "Star-Spangled Banner"<br>
+					<input type="radio" name="q8" value="inc"> "America, The Beautiful"<br>
+					<input type="radio" name="q8" value="inc"> "This Land is Your Land"<br>
+				</ul>
+		</form>
+
+		<form class="questionForm" id="q9">
+			<p class="question">How many stars are on the American Flag?</p>
+				<ul class="answers">
+					<input type="radio" name="q9" value="inc"> 48<br>
+					<input type="radio" name="q9" value="inc"> 13<br>
+					<input type="radio" name="q9" value="ans"> 50<br>
+					<input type="radio" name="q9" value="inc"> 25<br>
+				</ul>
+		</form>
+
+		<form class="questionForm" id="q10">
+			<p class="question">Who is the author of the Declaration of Indepedence?</p>
+				<ul class="answers">
+					<input type="radio" name="q10" value="inc"> John Hancock<br>
+					<input type="radio" name="q10" value="inc"> George Washington<br>
+					<input type="radio" name="q10" value="ans"> Thomas Jefferson<br>
+					<input type="radio" name="q10" value="inc"> Alexander Hamilton<br>
+				</ul>
+		</form>
+	</div>
+		<button type="button" id="submit">Submit</button>
+		<button type="button" id="restart">Restart</button>
+	</div>
+
+</body>
+
+</html>
