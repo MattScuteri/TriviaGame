@@ -16,17 +16,7 @@ $(document).ready(function(){
 		$('#submit').show();
 		$('#restart').show();
 		run();
-		decrement();
-		checkAnswer1();
-		checkAnswer2();
-		checkAnswer3();
-		checkAnswer4();
-		checkAnswer5();
-		checkAnswer6();
-		checkAnswer7();
-		checkAnswer8();
-		checkAnswer9();
-		checkAnswer10();																																				
+		decrement();																																				
 	});
 
 	$('#restart').on("click", function() {
@@ -56,7 +46,41 @@ $(document).ready(function(){
 
 	$('#submit').on("click", function() {
 		stop();
-	});
+
+		let q1 = document.form['questionForm']['q1'].value.toString()
+		let q2 = document.form['questionForm']['q2'].value.toString()
+		let q3 = document.form['questionForm']['q3'].value.toString()
+		let q4 = document.form['questionForm']['q4'].value.toString()
+		let q5 = document.form['questionForm']['q5'].value.toString()	
+		let q6 = document.form['questionForm']['q6'].value.toString()
+		let q7 = document.form['questionForm']['q7'].value.toString()
+		let q8 = document.form['questionForm']['q8'].value.toString()
+		let q9 = document.form['questionForm']['q9'].value.toString()
+		let q10 = document.form['questionForm']['q10'].value.toString()
+
+		let questionArray = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
+
+		let answerArray = ["b", "a", "c", "d", "a", "c", "a", "b", "c", "c"];
+
+		for (let i = 0; i <= total; i++) {
+			if (questionArray[i] === answerArray[i]) {
+				correctAnswers++;
+			} else {
+				incorrectAnswers++;
+			}
+		}
+	})
+	// 	checkAnswer1();
+	// 	checkAnswer2();
+	// 	checkAnswer3();
+	// 	checkAnswer4();
+	// 	checkAnswer5();
+	// 	checkAnswer6();
+	// 	checkAnswer7();
+	// 	checkAnswer8();
+	// 	checkAnswer9();
+	// 	checkAnswer10();
+	// });
 
 	function stop() {
 		clearInterval(intervalId);
@@ -76,104 +100,104 @@ $(document).ready(function(){
 		}
 	}
 
-	function checkAnswer1() {
-		$('input[name="q1"]').on('click', function(){
-			if ($(this).val() == 'ans') {
-				correctAnswers++;
-			} else {
-				incorrectAnswers++;
-			}
-		});
-	}
+	// function checkAnswer1() {
+	// 	$('input[name="q1"]').on('click', function(){
+	// 		if ($(this).val() === 'ans') {
+	// 			correctAnswers++;
+	// 		} else {
+	// 			incorrectAnswers++;
+	// 		}
+	// 	});
+	// }
 
-	function checkAnswer2() {
-		$('input[name="q2"]').on('click', function(){
-			if ($(this).val() == 'ans') {
-				correctAnswers++;
-			} else {
-				incorrectAnswers++;
-			}
-		});
-	}
+	// function checkAnswer2() {
+	// 	$('input[name="q2"]').on('click', function(){
+	// 		if ($(this).val() === 'ans') {
+	// 			correctAnswers++;
+	// 		} else {
+	// 			incorrectAnswers++;
+	// 		}
+	// 	});
+	// }
 
-	function checkAnswer3() {
-		$('input[name="q3"]').on('click', function(){
-			if ($(this).val() == 'ans') {
-				correctAnswers++;
-			} else {
-				incorrectAnswers++;
-			}
-		});
-	}
+	// function checkAnswer3() {
+	// 	$('input[name="q3"]').on('click', function(){
+	// 		if ($(this).val() === 'ans') {
+	// 			correctAnswers++;
+	// 		} else {
+	// 			incorrectAnswers++;
+	// 		}
+	// 	});
+	// }
 
-	function checkAnswer4() {
-		$('input[name="q4"]').on('click', function(){
-			if ($(this).val() == 'ans') {
-				correctAnswers++;
-			} else {
-				incorrectAnswers++;
-			}
-		});
-	}
+	// function checkAnswer4() {
+	// 	$('input[name="q4"]').on('click', function(){
+	// 		if ($(this).val() === 'ans') {
+	// 			correctAnswers++;
+	// 		} else {
+	// 			incorrectAnswers++;
+	// 		}
+	// 	});
+	// }
 
-	function checkAnswer5() {
-		$('input[name="q5"]').on('click', function(){
-			if ($(this).val() == 'ans') {
-				correctAnswers++;
-			} else {
-				incorrectAnswers++;
-			}
-		});
-	}
+	// function checkAnswer5() {
+	// 	$('input[name="q5"]').on('click', function(){
+	// 		if ($(this).val() === 'ans') {
+	// 			correctAnswers++;
+	// 		} else {
+	// 			incorrectAnswers++;
+	// 		}
+	// 	});
+	// }
 
-	function checkAnswer6() {
-		$('input[name="q6"]').on('click', function(){
-			if ($(this).val() == 'ans') {
-				correctAnswers++;
-			} else {
-				incorrectAnswers++;
-			}
-		});
-	}
+	// function checkAnswer6() {
+	// 	$('input[name="q6"]').on('click', function(){
+	// 		if ($(this).val() === 'ans') {
+	// 			correctAnswers++;
+	// 		} else {
+	// 			incorrectAnswers++;
+	// 		}
+	// 	});
+	// }
 
-	function checkAnswer7() {
-		$('input[name="q7"]').on('click', function(){
-			if ($(this).val() == 'ans') {
-				correctAnswers++;
-			} else {
-				incorrectAnswers++;
-			}
-		});
-	}
+	// function checkAnswer7() {
+	// 	$('input[name="q7"]').on('click', function(){
+	// 		if ($(this).val() === 'ans') {
+	// 			correctAnswers++;
+	// 		} else {
+	// 			incorrectAnswers++;
+	// 		}
+	// 	});
+	// }
 
-	function checkAnswer8() {
-		$('input[name="q8"]').on('click', function(){
-			if ($(this).val() == 'ans') {
-				correctAnswers++;
-			} else {
-				incorrectAnswers++;
-			}
-		});
-	}
+	// function checkAnswer8() {
+	// 	$('input[name="q8"]').on('click', function(){
+	// 		if ($(this).val() === 'ans') {
+	// 			correctAnswers++;
+	// 		} else {
+	// 			incorrectAnswers++;
+	// 		}
+	// 	});
+	// }
 
-	function checkAnswer9() {
-		$('input[name="q9"]').on('click', function(){
-			if ($(this).val() == 'ans') {
-				correctAnswers++;
-			} else {
-				incorrectAnswers++;
-			}
-		});
-	}
+	// function checkAnswer9() {
+	// 	$('input[name="q9"]').on('click', function(){
+	// 		if ($(this).val() === 'ans') {
+	// 			correctAnswers++;
+	// 		} else {
+	// 			incorrectAnswers++;
+	// 		}
+	// 	});
+	// }
 
-	function checkAnswer10() {
-		$('input[name="q10"]').on('click', function(){
-			if ($(this).val() == 'ans') {
-				correctAnswers++;
-			} else {
-				incorrectAnswers++;
-			}
-		});
-	}
+	// function checkAnswer10() {
+	// 	$('input[name="q10"]').on('click', function(){
+	// 		if ($(this).val() === 'ans') {
+	// 			correctAnswers++;
+	// 		} else {
+	// 			incorrectAnswers++;
+	// 		}
+	// 	});
+	// }
 
 });
