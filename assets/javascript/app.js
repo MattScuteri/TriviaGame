@@ -46,29 +46,7 @@ $(document).ready(function(){
 
 	$('#submit').on("click", function() {
 		stop();
-
-		let q1 = document.form['questionForm']['q1'].value.toString()
-		let q2 = document.form['questionForm']['q2'].value.toString()
-		let q3 = document.form['questionForm']['q3'].value.toString()
-		let q4 = document.form['questionForm']['q4'].value.toString()
-		let q5 = document.form['questionForm']['q5'].value.toString()	
-		let q6 = document.form['questionForm']['q6'].value.toString()
-		let q7 = document.form['questionForm']['q7'].value.toString()
-		let q8 = document.form['questionForm']['q8'].value.toString()
-		let q9 = document.form['questionForm']['q9'].value.toString()
-		let q10 = document.form['questionForm']['q10'].value.toString()
-
-		let questionArray = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
-
-		let answerArray = ["b", "a", "c", "d", "a", "c", "a", "b", "c", "c"];
-
-		for (let i = 0; i <= total; i++) {
-			if (questionArray[i] === answerArray[i]) {
-				correctAnswers++;
-			} else {
-				incorrectAnswers++;
-			}
-		}
+		checkAnswers();
 	})
 	// 	checkAnswer1();
 	// 	checkAnswer2();
@@ -97,6 +75,16 @@ $(document).ready(function(){
 				$('#timeIsUp').append("<br>Uncle Sam wants YOU...to hit those books more.</br>");
 				$('#timeUpImg').append('<img id="UncleSam" src="./assets/images/UncleSam.jpg" />');
 				$('#submit').hide();	
+		}
+	}
+
+	function checkAnswers() {
+		let answer = $('input[name=q1]:checked').val()
+
+		if (answer === 'ans') {
+			correctAnswers++;
+		} else {
+			incorrectAnswers++;
 		}
 	}
 
