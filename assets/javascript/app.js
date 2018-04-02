@@ -46,7 +46,83 @@ $(document).ready(function(){
 
 	$('#submit').on("click", function() {
 		stop();
-		checkAnswers();
+
+		if ($('input[name="q1"]:checked').val() == 'ans') {
+			correctAnswers++;
+		} else {
+			incorrectAnswers++;
+		}
+
+		if ($('input[name="q2"]:checked').val() == 'ans') {
+			correctAnswers++;
+		} else {
+			incorrectAnswers++;
+		}
+
+		if ($('input[name="q3"]:checked').val() == 'ans') {
+			correctAnswers++;
+		} else {
+			incorrectAnswers++;
+		}
+
+		if ($('input[name="q4"]:checked').val() == 'ans') {
+			correctAnswers++;
+		} else {
+			incorrectAnswers++;
+		}
+
+		if ($('input[name="q5"]:checked').val() == 'ans') {
+			correctAnswers++;
+		} else {
+			incorrectAnswers++;
+		}
+
+		if ($('input[name="q6"]:checked').val() == 'ans') {
+			correctAnswers++;
+		} else {
+			incorrectAnswers++;
+		}
+
+		if ($('input[name="q7"]:checked').val() == 'ans') {
+			correctAnswers++;
+		} else {
+			incorrectAnswers++;
+		}
+
+		if ($('input[name="q8"]:checked').val() == 'ans') {
+			correctAnswers++;
+		} else {
+			incorrectAnswers++;
+		}					
+
+		if ($('input[name="q9"]:checked').val() == 'ans') {
+			correctAnswers++;
+		} else {
+			incorrectAnswers++;
+		}
+
+		if ($('input[name="q10"]:checked').val() == 'ans') {
+			correctAnswers++;
+		} else {
+			incorrectAnswers++;
+		}													
+
+		$('.question-container').hide();
+		$('#timeIsUp').show();
+		$('#timeIsUp').append("<h3>Time's up!</h3>");
+		$('#timeIsUp').append("<br>Number correct: " + correctAnswers + "</br>");
+		$('#timeIsUp').append("<br>Number incorrect: " + incorrectAnswers + "</br>");
+		if (correctAnswers > 5) {
+			$('#timeIsUp').append("<br>Wow! You are a great American!</br>");
+			$('#timeUpImg').append('<img id="FlagHug" src="./assets/images/FlagHug.jpg" />');
+			$('#submit').hide();
+		}	else if (correctAnswers < 5) {
+				$('#timeIsUp').append("<br>Uncle Sam wants YOU...to hit those books more.</br>");
+				$('#timeUpImg').append('<img id="UncleSam" src="./assets/images/UncleSam.jpg" />');
+				$('#submit').hide();	
+		}
+
+		console.log(correctAnswers)
 	})
 	// 	checkAnswer1();
 	// 	checkAnswer2();
@@ -62,31 +138,12 @@ $(document).ready(function(){
 
 	function stop() {
 		clearInterval(intervalId);
-		$('.question-container').hide();
-		$('#timeIsUp').show();
-		$('#timeIsUp').append("<h3>Time's up!</h3>");
-		$('#timeIsUp').append("<br>Number correct: " + correctAnswers + "</br>");
-		$('#timeIsUp').append("<br>Number incorrect: " + incorrectAnswers + "</br>");
-		if (correctAnswers > 5) {
-			$('#timeIsUp').append("<br>Wow! You are a great American!</br>");
-			$('#timeUpImg').append('<img id="FlagHug" src="./assets/images/FlagHug.jpg" />');
-			$('#submit').hide();
-		}	else if (correctAnswers < 5) {
-				$('#timeIsUp').append("<br>Uncle Sam wants YOU...to hit those books more.</br>");
-				$('#timeUpImg').append('<img id="UncleSam" src="./assets/images/UncleSam.jpg" />');
-				$('#submit').hide();	
-		}
+
 	}
 
 	function checkAnswers() {
-		let answer = $('input[name=q1]:checked').val()
 
-		if (answer === 'ans') {
-			correctAnswers++;
-		} else {
-			incorrectAnswers++;
-		}
-	}
+	};
 
 	// function checkAnswer1() {
 	// 	$('input[name="q1"]').on('click', function(){
